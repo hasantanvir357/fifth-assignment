@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import Nav from './Components/Nav';
 import Hero from './Components/Hero';
 import TechContainer from './Components/TechContainer';
+import Footer from './Components/Footer';
 
 const App = () => {
   const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -32,6 +33,7 @@ const App = () => {
       <Nav />
       <Hero />
       <TechContainer />
+      <Footer />
     </div>
   );
 };

@@ -2,11 +2,9 @@ import bannerImage from '../assets/banner-stack.png';
 
 const Hero = () => {
   return (
-    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-16 md:py-20">
+    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-6 md:pb-10">
       <div className="flex flex-col md:flex-row items-center justify-between gap-8 lg:gap-12">
-        {/* Left Side */}
         <div className="flex-1 text-center md:text-left">
-          {/* Title */}
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-4 md:mb-6">
             <span className="block text-slate-900 mb-1">Build Your Ideal</span>
             <span className="bg-linear-to-r from-orange-500 via-pink-500 to-purple-600 bg-clip-text text-transparent">

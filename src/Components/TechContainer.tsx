@@ -7,8 +7,17 @@ import type { Technology } from './Types/Technology';
 
 const TechContainer = () => {
   const [technologies, setTechnologies] = useState<Technology[]>([]);
-  const [selectedTechs, setSelectedTechs] = useState<Technology[]>([]);
+
+  const [selectedTechs, setSelectedTechs] = useState<Technology[]>(() => {
+    const savedTechs = localStorage.getItem('selectedTechs');
+    return savedTechs ? JSON.parse(savedTechs) : [];
+  });
+
   const [isLoading, setIsLoading] = useState<boolean>(true);
+
+  useEffect(() => {
+    localStorage.setItem('selectedTechs', JSON.stringify(selectedTechs));
+  }, [selectedTechs]);
 
   useEffect(() => {
     setIsLoading(true);
@@ -30,7 +39,6 @@ const TechContainer = () => {
       toast.warning(`${tech.name} is already in your stack!`, { position: 'bottom-right' });
     } else {
       setSelectedTechs([...selectedTechs, tech]);
-
       toast.success(`${tech.name} added to stack!`, { position: 'bottom-right' });
     }
   };
@@ -46,12 +54,11 @@ const TechContainer = () => {
 
   const handleRemoveAll = () => {
     setSelectedTechs([]);
-
     toast.error('All technologies removed from stack.', { position: 'bottom-right' });
   };
 
   return (
-    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-2 pb-10">
       <div className="mb-8">
         <h1 className="text-3xl sm:text-4xl font-bold text-gray-900">
           Explore the <span className="text-pink-700">Technologies</span>
