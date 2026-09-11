@@ -1,14 +1,6 @@
 import React from 'react';
 
-type Technology = {
-  name: string;
-  category: string;
-  description: string;
-  icon: string;
-  rating: number;
-  difficulty: string;
-  badge?: string;
-};
+import type { Technology } from './Types/Technology';
 
 interface TechCardProps {
   tech: Technology;
@@ -22,7 +14,7 @@ const TechCard: React.FC<TechCardProps> = ({ tech, onSelect, isSelected }) => {
   return (
     <div className="card bg-base-100 border border-gray-200 shadow-sm hover:shadow-md transition-all p-5 flex flex-col justify-between rounded-2xl">
       <div>
-        {/* Header: Icon and Badge */}
+        {/*Icon and Badge */}
         <div className="flex justify-between items-start mb-4">
           <div className="w-12 h-12 p-2 bg-blue-50/50 rounded-xl flex items-center justify-center">
             <img src={icon} alt={name} className="w-full h-full object-contain" />

@@ -1,5 +1,6 @@
 import Hero from './Components/Hero';
 import Nav from './Components/Nav';
+import TechContainer from './Components/TechContainer';
 import './index.css';
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <>
       <Nav />
       <Hero />
+      <TechContainer />
     </>
   );
 }
