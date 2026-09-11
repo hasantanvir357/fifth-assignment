@@ -12,7 +12,7 @@ const TechContainer = () => {
 
   useEffect(() => {
     setIsLoading(true);
-    fetch('/technologies.json')
+    fetch('/Technologies.json')
       .then((res) => res.json())
       .then((data: Technology[]) => {
         setTechnologies(data);
