@@ -30,7 +30,7 @@ const Hero = () => {
 
             <button
               type="button"
-              className="h-11 px-6 rounded-xl text-xs sm:text-sm font-medium border border-slate-200 text-slate-700 bg-white hover:bg-slate-50 shadow-sm whitespace-nowrap transition-all active:scale-95"
+              className="h-11 px-6 rounded-xl text-xs sm:text-sm font-medium border border-slate-200 text-slate-700 bg-white hover:bg-slate-100 shadow-sm whitespace-nowrap transition-transform active:scale-95"
             >
               Learn More
             </button>
